@@ -1,19 +1,30 @@
 {
-  "name": "zhihuiyun",
-  "private": true,
-  "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "fullpage.js": "~2.6.9",
-    "modernizr": "~2.8.3",
-    "slimScroll": "~1.3.6"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
+    "name": "zhihuiyun",
+    "private": true,
+    "dependencies": {
+        "bootstrap-sass": "~3.3.5",
+        "fullpage.js": "~2.6.9",
+        "iCheck": "~1.0.2",
+        "modernizr": "~2.8.3",
+        "QueryLoader2": "queryloader2#~3.0.15"
+    },
+    "overrides": {
+        "bootstrap-sass": {
+            "main": [
+                "assets/stylesheets/_bootstrap.scss",
+                "assets/fonts/bootstrap/*",
+                "assets/javascripts/bootstrap.js"
+            ]
+        },
+        "QueryLoader2": {
+            "main": []
+        },
+        "iCheck": {
+            "main": [
+                "./icheck.min.js",
+                "./skins/polaris/polaris.png",
+                "./skink/polaris/polaris@2x.png"
+            ]
+        }
     }
-  }
 }

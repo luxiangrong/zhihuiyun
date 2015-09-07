@@ -3,12 +3,108 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
+// 
+html {
+    font-size: 10px
+}
+
+@media screen and (min-width:321px) and (max-width:375px) {
+    html {
+        font-size: 11px
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:414px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 22.5px
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:799px) {
+    html {
+        font-size: 23.5px
+    }
+}
+
+@media screen and (min-width:800px) {
+    html {
+        font-size: 25px
+    }
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.btn-top { 
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    color: #ffffff;
+    &:active, &:hover {
+        color: #ffffff;
+    }
+}
+
 #fullpage {
     .section {
         background: url(../images/bg01.jpg) no-repeat center center;
         background-size: 100% 100%;
+        .container {
+            padding: 0 40px;
+        }
+        .btn-wrap {
+            background-color: rgba(97, 197, 140, 0.3);
+            min-height: 100px;
+            padding-top: 20px;
+            .btn-submit {
+                text-decoration: none;
+                font-size: 2.5rem;
+                color: #ffffff;
+            }
+        }
+        .wall {
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+        }
         .toolbar-wrap {
             background-color: #fff;
+            &.blank {
+                background-color: transparent;
+                .toolbar {
+                    background-image: none;
+                }
+            }
             .toolbar {
                 height: 50px;
                 @include gradient-vertical(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
@@ -40,16 +136,148 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
         .title-wrap {
             @include img-retina("../images/pic01.jpg", "../images/pic01.jpg", 100%, 100%);
             background-size: cover;
-            height: 150px;
             .title {
                 background-color: rgba(255, 255, 255, 0.3);
                 padding: 20px 0;
                 margin-top: 20px;
+                margin-bottom: 20px;
                 text-align: center;
                 font-size: 2.5rem;
                 font-weight: bold;
                 border: 1px solid rgba(255, 255, 255, 0.8);
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+                .second {
+                    margin-top: 10px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.8);
+                    padding-top: 10px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 1.666rem;
+                }
+            }
+        }
+        .dl-xs-horizontal {
+            font-weight: bold;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+            dt {
+                float: left;
+                width: 7rem;
+                clear: left;
+                text-align: right;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            dd {
+                margin-left: 7rem;
+            }
+        }
+        .main-content {
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+            .dl-xs-horizontal {
+                font-weight: bold;
+                margin-bottom: 0;
+                dt {
+                    float: left;
+                    width: 7rem;
+                    clear: left;
+                    text-align: right;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                dd {
+                    margin-left: 7rem;
+                }
+            }
+        }
+        .contact-form {
+            padding-top: 20px;
+            .form-group {
+                margin-bottom: 10px;
+                .icheck-wrap {
+                    display: inline-block;
+                    font-weight: normal;
+                }
+            }
+        }
+        .text-content-wrap {
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+            .text-content {
+                font-size: 1.111rem;
+                line-height: 1.8;
+                margin-top: 20px;
+            }
+        }
+        .jiabin-wrap {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .pic {
+                width: 88px;
+                height: 100px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+            }
+            .intro {
+                width: 80%;
+                position: absolute;
+                right: 0;
+                top: 35px;
+                background-color: rgba(237, 240, 242, 0.3);
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+                padding: 10px;
+                padding-left: 18%;
+                font-size: 1.111rem;
+                @media (max-width: 320px) {
+                    padding-left: 20%;
+                }
+            }
+            h3.name {
+                position: absolute;
+                left: 92px;
+                margin-top: 8px;
+                font-weight: bold;
+                font-size: 1.6667rem;
+            }
+        }
+        &.schedule {
+            .form-group {
+                margin-bottom: 0;
+                margin-top: 10px;
+                label {
+                    font-size: 1.944rem;
+                    font-weight: bold;
+                }
+            }
+            .wall {
+                font-size: 1.4888rem;
+                font-weight: normal;
+                padding-bottom: 10px;
+                padding-top: 0px;
+            }
+            .dl-xs-horizontal {
+                margin-bottom: 0;
+                margin-top: 10px;
+                dt {
+                    float: left;
+                    width: 9rem;
+                    clear: left;
+                    text-align: right;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-weight: normal;
+                }
+                dd {
+                    margin-left: 10rem;
+                    font-weight: normal;
+                }
             }
         }
     }

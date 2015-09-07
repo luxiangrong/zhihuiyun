@@ -350,6 +350,15 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
           dest: '<%= config.dist %>'
+        }, {
+            src: 'bower_components/QueryLoader2/queryloader2.min.js',
+            dest: '<%= config.dist %>/scripts/vendor/queryloader2.js'
+        }, {
+            src: 'bower_components/iCheck/skins/polaris/polaris.png',
+            dest: '<%= config.dist %>/styles/polaris.png'
+        }, {
+            src: 'bower_components/iCheck/skins/polaris/polaris@2x.png',
+            dest: '<%= config.dist %>/styles/polaris@2x.png'
         }]
       }
     },
@@ -437,9 +446,9 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'filerev',
+    // 'filerev',
     'usemin',
-    'htmlmin'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
