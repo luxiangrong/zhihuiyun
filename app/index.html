@@ -11,7 +11,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="/bower_components/iCheck/skins/polaris/polaris.css" />
     <!-- endbuild -->
@@ -344,9 +343,6 @@
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
     <script src="/bower_components/iCheck/icheck.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -371,11 +367,7 @@
     <script>
     (function($) {
         $(document).ready(function() {
-            $('#fullpage').fullpage({
-                verticalCentered: false,
-                scrollOverflow: true,
-                anchors: ['s1', 's2', 's3', 's4', 's5', 's6', 's7']
-            });
+            
 
             $('input').iCheck({
                 checkboxClass: 'icheckbox_polaris',
