@@ -20,21 +20,7 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <!-- build:js scripts/vendor/queryloader2.js -->
-    <script src="bower_components/QueryLoader2/queryloader2.min.js"></script>
-    <!-- endbuild -->
-    <script type="text/javascript">
-    window.addEventListener('DOMContentLoaded', function() {
-        new QueryLoader2(document.querySelector("body"), {
-            barColor: "#efefef",
-            backgroundColor: "#111",
-            percentage: true,
-            barHeight: 1,
-            minimumTime: 200,
-            fadeOutTime: 1000
-        });
-    });
-    </script>
+    
 </head>
 
 <body>
@@ -42,11 +28,11 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="section">
-        <div class="toolbar-wrap  blank">
+        <div class="toolbar-wrap">
             <div class="toolbar">
                 <h1 class="header">
                     <a class="pull-left" href=""><i class="glyphicon glyphicon-menu-left pull-left back"></i></a>
-                    征文通知
+                    立即报名
                     <button class="btn pull-right" data-toggle="collapse" data-target="#menu" ><i class="glyphicon glyphicon-menu-hamburger menu"></i></button>
                 </h1>
             </div>
@@ -62,54 +48,46 @@
                 </ul>
             </div>
         </div>
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
-							<div class="media">
-			                    <div class="media-left">
-		                            <img class="media-object" src="images/pic03.jpg" alt="...">
-			                    </div>
-			                    <div class="media-body">
-			                        <h4 class="media-heading">张三</h4>
-                					<p>小儿消化道问题</p>
-            					</div>
-            				</div>
-            				<div class="label-num">13</div>
-            			</a>
-            		</h4>
-        		</div>
-		        <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-		            <div class="panel-body">
-		                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-		            </div>
-		        </div>
-		    </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading2">
-                    <h4 class="panel-title">
-				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapseOne">
-							<div class="media">
-			                    <div class="media-left">
-		                            <img class="media-object" src="images/pic03.jpg" alt="...">
-			                    </div>
-			                    <div class="media-body">
-			                        <h4 class="media-heading">张三</h4>
-                					<p>小儿消化道问题</p>
-            					</div>
-            				</div>
-            				<div class="label-num">13</div>
-            			</a>
-            		</h4>
-        		</div>
-		        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-		            <div class="panel-body">
-		                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-		            </div>
-		        </div>
-		    </div>
-	    </div>
+        <div class="contact-form">
+            <div class="container">
+                <div class="form-group">
+                    <label class="sr-only" for="name">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="姓名">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="phone">手机</label>
+                    <input type="text" class="form-control" id="phone" placeholder="手机">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="email">邮箱</label>
+                    <input type="text" class="form-control" id="email" placeholder="邮箱">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="hospital">医院</label>
+                    <input type="text" class="form-control" id="hospital" placeholder="医院">
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>所属科室</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="identity-number">省份证号</label>
+                    <input type="text" class="form-control" id="identity-number" placeholder="省份证号">
+                </div>
+            </div>
+            <div class="container">
+                <div class="wall baoming">
+                    <h5>报名须知</h5>
+                    <p>
+                        报名须知报名须知报名须知报名须知报名须知报名须知报名须知报名须知报名须知报名须知报名须知
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <a href="#" class="btn btn-block btn-a">提交</a>
+            </div>
+        </div>
     </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -138,9 +116,11 @@
     <script>
     (function($) {
         $(document).ready(function() {
-            if ($('.section').height() < $(window).height()) {
-                $('.section').height($(window).height());
-            }
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_polaris',
+                radioClass: 'iradio_polaris',
+                increaseArea: '-10%' // optional
+            });
 
         });
     })(jQuery);

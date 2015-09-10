@@ -60,6 +60,9 @@ html {
 .mb40 {
     margin-bottom: 40px;
 }
+.pb50 {
+    padding-bottom: 47px;
+}
 
 .btn-l,
 .btn-r {
@@ -71,6 +74,19 @@ html {
 }
 
 .btn-r {
+    border-radius: 3px 34px 34px 3px;
+}
+
+.btn-l2,
+.btn-r2 {
+    @include button-variant(#fff, #39969c, #ffffff);
+}
+
+.btn-l2 {
+    border-radius: 34px 3px 3px 34px;
+}
+
+.btn-r2 {
     border-radius: 3px 34px 34px 3px;
 }
 
@@ -87,21 +103,36 @@ html {
     }
 }
 
+.btn-a {
+    @include button-variant(#fff, #a1d6c6, #ffffff);
+}
+.btn-b {
+    @include button-variant(#fff, #a1d6c6, #ffffff);
+    border-radius: 0;
+    border: 0px;
+    font-size: 2.5rem;
+    &.btn-fix-bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+}
+
 body {}
 
 html {}
 
 .section {
-    background: url(../images/bg01.jpg) no-repeat center center;
+    background: url(../images/bg01.jpg) repeat-y center center;
     background-size: 100% 100%;
     height: 100%;
     .container {
         padding: 0 40px;
     }
     .btn-wrap {
-        background-color: rgba(97, 197, 140, 0.3);
-        min-height: 100px;
-        padding-top: 20px;
+        // background-color: rgba(97, 197, 140, 0.3);
+        min-height: 70px;
+        // padding-top: 20px;
         .btn-submit {
             text-decoration: none;
             font-size: 2.5rem;
@@ -110,10 +141,10 @@ html {}
     }
     .panel-group {
         .panel {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255, 255, 255, 0.2);
             .panel-heading {
                 position: relative;
-                background-color: rgba(255,255,255,0.2);
+                background-color: rgba(255, 255, 255, 0.2);
                 a {
                     text-decoration: none;
                 }
@@ -196,7 +227,6 @@ html {}
         padding-bottom: 10px;
     }
     .toolbar-wrap {
-        background-color: #fff;
         &.blank {
             background-color: transparent;
             .toolbar {
@@ -245,11 +275,13 @@ html {}
                 color: #333;
             }
             .header {
+                background-color: #fff;
                 line-height: 50px;
                 margin: 0;
                 text-align: center;
                 font-size: 1.94rem;
                 font-weight: normal;
+                padding-left: 20px;
             }
             .btn {}
         }
@@ -258,15 +290,14 @@ html {}
         @include img-retina("../images/pic01.jpg", "../images/pic01.jpg", 100%, 100%);
         background-size: cover;
         .title {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px 0;
             margin-top: 20px;
             margin-bottom: 20px;
             text-align: center;
             font-size: 2.5rem;
             font-weight: bold;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16);
+            // box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.16); 
             small {
                 font-size: 1.5rem;
             }
@@ -371,6 +402,41 @@ html {}
             font-size: 1.6667rem;
         }
     }
+    .org-wrap {
+        font-size: 1.38889rem;
+        margin-top: 20px;
+        .list-img {
+            width: 13px;
+            height: 13px;
+        }
+        .wall {
+            margin-top: 10px;
+        }
+    }
+    .schedule-wrap {
+        background: url(../images/pic02.png) no-repeat 0% bottom;
+        background-size: auto 12px;
+        padding-bottom: 12px;
+        .wall {
+            .list-img {
+                width: 13px;
+                height: 13px;
+            }
+            box-shadow: none;
+            .date {
+                font-size: 1.6444rem;
+                font-weight: bold;
+            }
+        }
+    }
+    .schedule-info {
+        margin-bottom: 20px;
+    }
+    .panel-group-topic {
+        .panel {
+            margin-top: 0px;
+        }
+    }
     &.schedule {
         .form-group {
             margin-bottom: 0;
@@ -405,4 +471,45 @@ html {}
             }
         }
     }
+    .baoming {
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        h5 {
+            padding-bottom: 10px;
+            font-size: 1.66667rem;
+            text-align: center;
+            margin: 0;
+        }
+        p {
+            font-size: 1.25rem;
+        }
+    }
+    .img-check {
+        margin-top: 30%;
+    }
+    .img-qr {
+        position: absolute;
+        top: 50%;
+        margin-top: -100px;
+        width: 183px;
+        height: 183px;
+        left: 50%;
+        margin-left: -90px;
+    }
+    .check-text {
+        font-size: 1.944rem;
+        margin-top: 40px;
+    }
+}
+
+.my-modal {
+    .modal-content {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+    .modal-footer {
+        text-align: center;
+        border-top: none;
+    } 
 }

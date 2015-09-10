@@ -20,24 +20,40 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+   
 </head>
 
 <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <ul class="list-group">
-        <li class="list-group-item"><a href="p1.html" target="_blank">p1</a></li>
-        <li class="list-group-item"><a href="p2.html" target="_blank">p2</a></li>
-        <li class="list-group-item"><a href="p3.html" target="_blank">p3</a></li>
-        <li class="list-group-item"><a href="p4.html" target="_blank">p4</a></li>
-        <li class="list-group-item"><a href="p5.html" target="_blank">p5</a></li>
-        <li class="list-group-item"><a href="p6.html" target="_blank">p6</a></li>
-        <li class="list-group-item"><a href="p7.html" target="_blank">p7</a></li>
-        <li class="list-group-item"><a href="p8.html" target="_blank">p8</a></li>
-        <li class="list-group-item"><a href="p11.html" target="_blank">p11</a></li>
-        <li class="list-group-item"><a href="p12.html" target="_blank">p12</a></li>
-    </ul>
+    <div class="section">
+        <div class="toolbar-wrap  blank">
+            <div class="toolbar">
+                <h1 class="header">
+                    <a class="pull-left" href=""><i class="glyphicon glyphicon-menu-left pull-left back"></i></a>
+                    摇一摇签到
+                    <button class="btn pull-right" data-toggle="collapse" data-target="#menu" ><i class="glyphicon glyphicon-menu-hamburger menu"></i></button>
+                </h1>
+            </div>
+            <div class="collapse" id="menu">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="page1.html">首页</a></li>
+                    <li class="list-group-item"><a href="page2.html">报名参加</a></li>
+                    <li class="list-group-item"><a href="page3.html">日程按排</a></li>
+                    <li class="list-group-item"><a href="page4.html">征文通知</a></li>
+                    <li class="list-group-item"><a href="page5.html">征文要求</a></li>
+                    <li class="list-group-item"><a href="page6.html">会议介绍</a></li>
+                    <li class="list-group-item"><a href="page7.html">会议嘉宾</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <img src="images/pic03.png"  alt="" class="img-responsive img-check">
+            <p class="check-text">张先生您好，<br/>点击下面按钮确认签到</p>
+        </div>
+        <a href="#" class="btn btn-block btn-b btn-fix-bottom">确认签到</a>
+    </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -62,6 +78,16 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function($) {
+        $(document).ready(function() {
+           if($('.section').height() < $(window).height()) {
+           		$('.section').height($(window).height());
+           }
+
+        });
+    })(jQuery);
+    </script>
 </body>
 
 </html>

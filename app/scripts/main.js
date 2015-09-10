@@ -1,2 +1,8 @@
-// jshint devel:true
-console.log('\'Allo \'Allo!');
+(function($) {
+        $(document).ready(function() {
+           if($('.section').height() < $(window).height()) {
+           		$('.section').height($(window).height());
+           }
+
+        });
+    })(jQuery);
